@@ -9,4 +9,20 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+This project will show an example chi-squared analysis on example data testing for any association between maximum education level and salary.
+
+***Loading Packages***
+```{r}
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+library(tidyr)
+```
+
+## Creating a data set
+```{r}
+Education_Level = c(rep("GED",15), rep("Undergraduate",35), rep("Graduate",50))
+Salary = c(rep("Under 75K",15), rep("Over 75K",35), rep("Over 75K",50))
+df = data.frame(Education_Level, Salary)
+dftable <- table(df)
+```
