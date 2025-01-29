@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This project will show an example chi-squared analysis on example data testing for any association between maximum education level and salary.
+This project will show an example chi-squared analysis on example data testing for a statistically significant association between maximum education level and making under $75,000 or over $75,000.
 
 ***Loading Packages***
 ```{r}
@@ -42,4 +42,4 @@ print(chisq.test(dftable))
 ```
 ### Results
 
-Our p-value is less than 0.01 which means that we can reject our null hypothesis. We can assume that there is a statistically significant association between maximum education level and either making over $75,000 or under $75,000.
+Our p-value is less than 0.01 which means that we can reject our null hypothesis. We can assume that there is a statistically significant association between maximum education level and making over $75,000 or under $75,000.
