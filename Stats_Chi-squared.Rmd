@@ -21,8 +21,25 @@ library(tidyr)
 
 ## Creating a data set
 ```{r}
-Education_Level = c(rep("GED",15), rep("Undergraduate",35), rep("Graduate",50))
-Salary = c(rep("Under 75K",15), rep("Over 75K",35), rep("Over 75K",50))
+Education_Level = c(rep("GED",50), rep("Undergraduate",50), rep("Graduate",50))
+Salary = c(rep("Under 75K", 45), rep("Over 75K", 5), rep("Under 75K",20), rep("Over 75K",30), rep("Under 75K", 2), rep("Over 75K",48))
 df = data.frame(Education_Level, Salary)
 dftable <- table(df)
+print(dftable)
 ```
+
+### Statistical Analysis
+
+Before running the chi-squared test we need to specify our hypothesis:
+H0: There is no association between the variables (null hypothesis)
+Ha: There is an association between the variables (alternative hypothesis)
+
+We can set our alpha to 0.05 for this example. This means that we are looking for a p-value below 0.05 to reject the null hypothesis.
+
+***Chi-square Test***
+```{r}
+print(chisq.test(dftable))
+```
+### Results
+
+Our p-value is less than 0.01 which means that we can reject our null hypothesis. We can assume that there is a statistically significant association between maximum education level and either making over $75,000 or under $75,000.
