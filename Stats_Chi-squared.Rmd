@@ -42,4 +42,4 @@ print(chisq.test(dftable))
 ```
 ### Results
 
-Our p-value is less than 0.01 which means that we can reject our null hypothesis. We can assume that there is a statistically significant association between maximum education level and making over $75,000 or under $75,000.
+Our p-value is less than 0.01 (p-value < 2.2e-16) which means that we can reject our null hypothesis. We can assume that there is a statistically significant association between maximum education level and making over $75,000 or under $75,000.
