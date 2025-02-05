@@ -30,8 +30,8 @@ print(dftable)
 
 ### Statistical Analysis
 
-Before running the chi-squared test we need to specify our hypothesis:
-H0: There is no association between the variables (null hypothesis)
+Before running the chi-squared test we need to specify our hypothesis: <br>
+H0: There is no association between the variables (null hypothesis) <br>
 Ha: There is an association between the variables (alternative hypothesis)
 
 We can set our alpha to 0.05 for this example. This means that we are looking for a p-value below 0.05 to reject the null hypothesis.
